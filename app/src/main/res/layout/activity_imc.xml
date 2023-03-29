@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".imc">
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="285dp"
+      android:layout_height="121dp"
+      android:layout_marginTop="3dp"
+      android:layout_marginBottom="11dp"
+      android:background="@drawable/imc"
+      app:layout_constraintBottom_toTopOf="@+id/txtPeso"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.506"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/txtPeso"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:hint="Informe o peso"
+      android:inputType="number"
+      app:layout_constraintBottom_toTopOf="@+id/txtAltura"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+  <EditText
+      android:id="@+id/txtAltura"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:hint="Informe a altura"
+      android:inputType="numberDecimal"
+      app:layout_constraintBottom_toTopOf="@+id/button"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtPeso" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="btnCalcularOnClick"
+      android:text="Calcular IMC"
+      app:layout_constraintBottom_toTopOf="@+id/lblResultado"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+
+  <TextView
+      android:id="@+id/lblResultado"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="416dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button" />
+
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="300dp"
+      android:layout_height="300dp"
+      android:layout_marginStart="55dp"
+      android:layout_marginTop="80dp"
+      android:layout_marginEnd="56dp"
+      android:layout_marginBottom="36dp"
+      android:src="@drawable/tabela"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/lblResultado"
+      tools:ignore="MissingConstraints" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

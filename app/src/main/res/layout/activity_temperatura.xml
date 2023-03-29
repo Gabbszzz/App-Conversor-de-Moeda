@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/clima"
+    tools:context=".temperatura">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="104dp"
+      android:layout_marginTop="76dp"
+      android:layout_marginEnd="103dp"
+      android:background="#F7F1EBEB"
+      android:fontFamily="sans-serif-medium"
+      android:includeFontPadding="false"
+      android:text="Conversor de Temperatura"
+      android:visibility="visible"
+      app:layout_constraintBottom_toTopOf="@+id/imageView2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:textAllCaps="true" />
+
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="156dp"
+      android:layout_height="147dp"
+      android:layout_marginStart="127dp"
+      android:layout_marginTop="29dp"
+      android:layout_marginEnd="128dp"
+      android:layout_marginBottom="40dp"
+      android:alpha="2"
+      app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView"
+      app:srcCompat="@drawable/temp" />
+
+  <RadioGroup
+      android:id="@+id/radioGroup"
+      android:layout_width="260dp"
+      android:layout_height="50dp"
+      android:layout_marginStart="78dp"
+      android:layout_marginTop="6dp"
+      android:layout_marginEnd="73dp"
+      android:layout_marginBottom="9dp"
+      android:background="#A8FFFFFF"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toTopOf="@+id/button2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editTextNumber">
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Fahrenheit"
+        app:buttonTint="#000000" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:text="Kelvin"
+        app:buttonTint="#FC000000" />
+
+  </RadioGroup>
+
+  <EditText
+      android:id="@+id/editTextNumber"
+      android:layout_width="130dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="144dp"
+      android:layout_marginTop="26dp"
+      android:layout_marginEnd="144dp"
+      android:layout_marginBottom="14dp"
+      android:background="#A8FFFFFF"
+      android:ems="10"
+      android:inputType="number"
+      app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+  <EditText
+      android:id="@+id/editTextNumber2"
+      android:layout_width="130dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="144dp"
+      android:layout_marginTop="9dp"
+      android:layout_marginEnd="200dp"
+      android:layout_marginBottom="68dp"
+      android:background="#A8FFFFFF"
+      android:ems="10"
+      android:inputType="number"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="130dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="144dp"
+      android:layout_marginTop="2dp"
+      android:layout_marginEnd="144dp"
+      android:background="#A8FFFFFF"
+      android:text="Converter"
+      app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
